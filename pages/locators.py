@@ -16,4 +16,4 @@ class LoginPageLocators():
     NEW_REGISTRATION_EMAIL = (By.CSS_SELECTOR, "#id_registration-email")
     NEW_REGISTRATION_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
     REPEAT_NEW_REGISTRATION_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
-    REGISTER_BUTTON = (By.XPATH, "//button[@value='Register']") 
+    REGISTER_BUTTON = (By.XPATH, "//button[@value='Register']")

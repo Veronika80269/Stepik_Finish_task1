@@ -20,12 +20,11 @@ def test_guest_can_add_product_to_basket2(browser):
     page.solve_quiz_and_get_code()
     page.check_add_of_product("Coders at Work")
     
-@pytest.mark.parametrize('promo_code',
-                          ["1,2,3,4,5,6",
-                                  pytest.param("7", marks=pytest.mark.xfail),
+@pytest.mark.parametrize('promo_offer', ["0","1", "3", "4", "5", "6", 
+                                        pytest.param("7", marks=pytest.mark.xfail),
                                   "8,9"])
-def test_guest_can_add_product_to_basket3(browser, promo_code):
-    link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{}'.format(promo_code)
+def test_guest_can_add_product_to_basket3(browser, promo_offer):
+    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_offer}"
     page = ProductObject(browser, link)
     page.open()
     page.check_price("£19.99")
@@ -33,5 +32,6 @@ def test_guest_can_add_product_to_basket3(browser, promo_code):
     page.press_submit_button()
     page.solve_quiz_and_get_code()
     page.check_add_of_product("Coders at Work")
+  
     
 

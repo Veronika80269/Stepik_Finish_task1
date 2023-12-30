@@ -50,6 +50,17 @@ def test_guest_cant_see_success_message(browser):
     page = ProductObject(browser, link)
     page.open()
     page.should_not_be_success_message()
+
+def test_message_disappeared_after_adding_product_to_basket(browser):
+    link = " http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+    page = ProductObject(browser, link)
+    page.open()
+    page.check_price("£19.99")
+    page.check_name_of_product("Coders at Work")
+    page.press_submit_button()
+    page.solve_quiz_and_get_code()
+    page.check_add_of_product("Coders at Work")
+    page.should_be_disappeared_success_message
     
     
 

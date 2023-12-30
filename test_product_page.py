@@ -45,5 +45,11 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     page.check_add_of_product("Coders at Work")
     page.should_not_be_success_message()
   
+def test_guest_cant_see_success_message(browser):
+    link = " http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+    page = ProductObject(browser, link)
+    page.open()
+    page.should_not_be_success_message()
+    
     
 

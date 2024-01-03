@@ -65,7 +65,6 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
     page.check_add_of_product("Coders at Work")
     page.should_be_disappeared_success_message
 
-@pytest.mark.smoke
 def  test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = " http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
     page = ProductObject(browser, link)

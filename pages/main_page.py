@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from locators import MainPageLocators
 from .login_page import LoginPage
 
+
 #метод, который осуществляет переход к странице логина
 class MainPage(BasePage):
   def go_to_login_page(self):

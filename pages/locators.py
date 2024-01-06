@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 class BasePageLocators:
     BUTTON_VIEW_BASKET = (By.CSS_SELECTOR, "span.btn-group a.btn.btn-default")
-
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 class BasketPageLocators():
     BASKET_IS_EMPTY = (By.CSS_SELECTOR, ".basket-items")
     TEXT_IS_EMPTY = (By.CSS_SELECTOR, "#messages")

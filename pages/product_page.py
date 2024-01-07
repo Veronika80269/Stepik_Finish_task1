@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from .locators import ProductPageLocators
 from .locators import MainPageLocators
 
-class ProductObject(BasePage):
+class ProductPage(BasePage):
     def go_to_login_page(self):
         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         login_link.click()

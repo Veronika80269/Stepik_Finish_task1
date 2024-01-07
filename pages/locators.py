@@ -13,7 +13,7 @@ class MainPageLocators():
 
 class LoginPageLocators():
     PART_URL = "login"
-    #Подберите селекторы к формам регистрации и логина
+    
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     LOGIN_EMAIL = (By.CSS_SELECTOR, 'input[name="login-username"]')
     LOGIN_PASS = (By.CSS_SELECTOR, 'input[name="login-password"]')
